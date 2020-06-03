@@ -5,11 +5,12 @@ Welcome to the FIDO Alliance - Certification Conformance Test Tools resource rep
 
 Here you can find a help with running the conformance test tools and submit the issue.
 
-If you would like to get access to the conformance test tools please submit request at https://fidoalliance.org/certification/conformance/
+- [Documentation](https://github.com/fido-alliance/conformance-test-tools-resources/wiki)
 
-To submit a bug https://github.com/fido-alliance/conformance-test-tools-resources/issues
+- [Request access to the tools](https://fidoalliance.org/certification/conformance/)
 
-And our documentation can be found in our WIKI https://github.com/fido-alliance/conformance-test-tools-resources/wiki
+- [Submit issue](https://github.com/fido-alliance/conformance-test-tools-resources/issues)
+
 
 # Privacy
 Note that this repository is open to the general public. If you are concerned about your privacy or the privacy of your company, please email [conformance-tools@fidoalliance.org](conformance-tools@fidoalliance.org)

@@ -4,7 +4,7 @@ If you have privacy concerns, please email [conformance-tools@fidoalliance.org](
 
 ## FIRST PRE CHECK
 
-- [ ] I SOLEMNLY SWEAR THAT I HAVE SEARCHED [DOCUMENTATION](https://github.com/fido-alliance/conformance-test-tools-resources/wiki) AND WAS NOT ABLE TO RESOLVE MY ISSUE
+- [ ] I SOLEMNLY SWEAR THAT I HAVE SEARCHED [DOCUMENTATION](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs) AND WAS NOT ABLE TO RESOLVE MY ISSUE
 
 ## What protocol are you implementing?
 

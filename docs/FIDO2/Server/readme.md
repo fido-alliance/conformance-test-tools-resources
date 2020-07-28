@@ -52,8 +52,6 @@ Click RED "Submit result" button to submit result to FIDO alliance. Then you can
 
 ### ServerAuthenticatorAssertionResponse test
 
-* P-1 Send a valid ServerAuthenticatorAssertionResponse, and check that server succeeds
-* F-1 Send ServerAuthenticatorAssertionResponse that is missing "id" field and check that server returns an error
 
 
 

@@ -7,6 +7,8 @@ Here you can find a help with running the conformance test tools and submit the 
 
 - [Documentation](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs)
 
+- [Snippets](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/snippets) - Helpful pieces of code
+
 - [Request access to the tools](https://fidoalliance.org/certification/conformance/)
 
 - [Submit issue](https://github.com/fido-alliance/conformance-test-tools-resources/issues)

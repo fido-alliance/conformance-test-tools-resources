@@ -15,6 +15,13 @@ For UAF conformance test:
  - [Client-Authenticator Combo](./UAF/Client-Authr-Combo/) TODO
  - [Client](./UAF/Client/) TODO
  - [ASM](./UAF/ASM/) TODO
+ 
+ 
+FIDO Certification Conformance Tools Facets:
+
+- ios:bundle-id:org.fidoalliance.mobile.conformancetools
+- android:apk-key-hash:LK84ci82ruA6u8SyF26cghsVwZg=
+- android:apk-key-hash:hoG2zCMzhpGCNnLFceBuVpPfDqM"
 
 For U2F conformance test:
 

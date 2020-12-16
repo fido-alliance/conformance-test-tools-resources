@@ -8,8 +8,11 @@ If you have privacy concerns, please email [conformance-tools@fidoalliance.org](
 
 ## What protocol are you implementing?
 
-- [ ] FIDO2 1.0
+- [ ] FIDO2 Server
+- [ ] CTAP2.0
+- [ ] CTAP2.1
 - [ ] UAF 1.1
+- [ ] U2F 1.1
 - [ ] U2F 1.2
 
 NOTE: UAF 1.0 certification have been officially sunset. U2F 1.2 only supported version of U2F.

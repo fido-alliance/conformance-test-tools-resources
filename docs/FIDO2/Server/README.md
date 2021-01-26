@@ -20,31 +20,31 @@ You can choose these options what you want to test.
 * Then you can find 5 url for MDS. Setup those 5 urls to access from your server.
 * Launch FIDO Conformance Tools and set your server url into text box at TESTS CONFIGURATION.
 
-<img src="2.png" width="50%"/>
+<img src="img/2.png" width="50%"/>
 
 * If you want to capture network while testing, launch inspector tool from Menu -> Open Inspector menu.
 
-<img src="3.png" width="50%"/>
+<img src="img/3.png" width="50%"/>
 
 * Check the options you want to test.
 
-<img src="4.png" width="50%"/>
+<img src="img/4.png" width="50%"/>
 
 ## Run tests
 
 * After you complete preparations and configurations, just click a green "RUN" button.
 
-<img src="5.png" width="50%"/>
+<img src="img/5.png" width="50%"/>
 
 
 ## Test Results
 * You can see the results of tests on top of the tool's screen.
 
-<img src="6.png" width="80%"/>
+<img src="img/6.png" width="80%"/>
 
 * If you don't find any number of failure, you can see the RED "SUBMIT RESULT" button on bottom of application screen.
 
-<img src="7.png" width="50%"/>
+<img src="img/7.png" width="50%"/>
 
 
 ## Submit Results

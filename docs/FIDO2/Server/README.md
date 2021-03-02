@@ -1,6 +1,6 @@
-# Running FIDO2 Server tests
+# Running FIDO2 Server Tests
 
-## FIDO2 Server Tests Options
+## FIDO2 Server Test Options
 
 1. MakeCredential Request
 2. MakeCredential Response
@@ -8,63 +8,63 @@
 4. GetAssertion Response
 5. Metadata Service Tests
 
-You can choose these options what you want to test.
+Choose from these options what you want to test.
 
 <img src="img/1.png" width="50%"/>
 
 ## Preparations and Configurations
 
-* Setup your FIDO2 server with HTTPS enable access.
+* Set up your FIDO2 server with HTTPS access enabled.
 * Click "DOWNLOAD SERVER METADATA" to download metadata and register metadata to your server.
-* Register your server url at https://fidoalliance.co.nz/mds/ and add provided MDS endpoints to your server.
-* Then you can find 5 url for MDS. Setup those 5 urls to access from your server.
-* Launch FIDO Conformance Tools and set your server url into text box at TESTS CONFIGURATION.
+* Register your server URL at https://fidoalliance.co.nz/mds/ and add provided MDS endpoints to your server.
+* Next find five URLs for MDS. Set up those five URLs to access from your server.
+* Launch FIDO Conformance Tools and set your server URL into the text box below TESTS CONFIGURATION.
 
 <img src="img/2.png" width="50%"/>
 
-* If you want to capture network while testing, launch inspector tool from Menu -> Open Inspector menu.
+* If you want to capture network while testing, launch the inspector tool from Menu -> Open Inspector menu.
 
 <img src="img/3.png" width="50%"/>
 
-* Check the options you want to test.
+* Select the options you want to test.
 
 <img src="img/4.png" width="50%"/>
 
 ## Run tests
 
-* After you complete preparations and configurations, just click a green "RUN" button.
+* After completing these preparations and configurations, click the green "RUN" button.
 
 <img src="img/5.png" width="50%"/>
 
 
 ## Test Results
-* You can see the results of tests on top of the tool's screen.
+* You can see the results of the tests at the top of the Tools screen.
 
 <img src="img/6.png" width="80%"/>
 
-* If you don't find any number of failure, you can see the RED "SUBMIT RESULT" button on bottom of application screen.
+* If the results do not indicate any failures found, find the red "SUBMIT RESULT" button on the bottom of the application screen.
 
 <img src="img/7.png" width="50%"/>
 
 
 ## Submit Results
 
-* Click RED "SUBMIT RESULT" button to submit result to FIDO alliance.
-* You need to run 5 test cases at once to submit successful results. If you run 5 test cases separately, you cannot see red "SUBMIT RESULT" button even if your server passes all test items.
+* Click the red "SUBMIT RESULT" button to submit your results to the FIDO Alliance.
+* You need to run five test cases simultaneously to submit successful results. If you run five test cases separately, you will not see the red "SUBMIT RESULT" button even if your server passes all the test items.
 
 
 ## Test Items
 
-* Bellow lists describes mandatory test items.(some of lists are optional.)
-* The "P" in the number like "P-n" means the server should return correct  successful response.
-* The "F" in the number like "F-n" means the server should return correct error response.
+* The list below describes mandatory test items (some lists are optional).
+* The "P" in a number like "P-n" means the server should return the correct successful response.
+* The "F" in a number like "F-n" means the server should return the correct error response.
 
 ### "MakeCredential Request" test items
 
 #### Server-ServerPublicKeyCredentialCreationOptions-Req-1
 ##### Test server generating ServerPublicKeyCredentialCreationOptionsRequest
 
-* P-1 Get ServerPublicKeyCredentialCreationOptionsResponse, and check that: (a) response MUST contain "status" field, and it MUST be of type DOMString and set to "ok" (b) response MUST contain "errorMessage" field, and it MUST be of type DOMString and set to an empty string (c) response contains "user" field, of type Object and: (1) check that user.name is not missing, and is of type DOMString (2) check that user.displayName is not missing, and is of type DOMString (3) check that user.id is not missing, and is of type DOMString, and is not empty. It MUST be base64url encoded byte sequence, and is not longer than 64 bytes. (4) If user.icon is presented, check that it's is of type DOMString (d) response contains "rp" field, of type Object and: (1) check that rp.name is not missing, and is of type DOMString (2) check that rp.id is not missing, and is of type DOMString. (3) If rp.icon is presented, check that it's is of type DOMString (e) response contains "challenge" field, of type String, base64url encoded and not less than 16 bytes. (f) response contains "pubKeyCredParams" field, of type Array and: (1) each member MUST be of type Object (2) each member MUST contain "type" field of type DOMString (3) each member MUST contain "alg" field of type Number (4) MUST contain one member with type set to "public-key" and alg set to an algorithm that is supported by the authenticator (g) If response contains "timeout" field, check that it's of type Number and is bigger than 0 (h) response contains "extensions" field, with "example.extension" key presented‣
+* P-1 Get ServerPublicKeyCredentialCreationOptionsResponse, and check that: (a) response MUST contain "status" field, and it MUST be of type DOMString and set to "ok" (b) response MUST contain "errorMessage" field, and it MUST be of type DOMString and set to an empty string (c) response contains "user" field, of type Object and: (1) check that user.name is not missing, and is of type DOMString (2) check that user.displayName is not missing, and is of type DOMString (3) check that user.id is not missing, and is of type DOMString, and is not empty. It MUST be base64url encoded byte sequence, and is not longer than 64 bytes. (4) If user.icon is presented, check that it is of type DOMString (d) response contains "rp" field, of type Object and: (1) check that rp.name is not missing, and is of type DOMString (2) check that rp.id is not missing, and is of type DOMString. (3) If rp.icon is presented, check that it is of type DOMString (e) response contains "challenge" field, of type String, base64url encoded and not less than 16 bytes. (f) response contains "pubKeyCredParams" field, of type Array and: (1) each member MUST be of type Object (2) each member MUST contain "type" field of type DOMString (3) each member MUST contain "alg" field of type Number (4) MUST contain one member with type set to "public-key" and alg set to an algorithm that is supported by the authenticator (g) If response contains "timeout" field, check that it's of type Number and is bigger than 0 (h) response contains "extensions" field, with "example.extension" key presented‣
 * P-2 Request from server ServerPublicKeyCredentialCreationOptionsResponse with "none" attestation, and check that server, and check that ServerPublicKeyCredentialCreationOptionsResponse.attestation is set to "none"‣
 * P-3 Get two ServerPublicKeyCredentialCreationOptionsResponses, and check that challenge in Request1 is different to challenge in Request2
 
@@ -72,7 +72,7 @@ You can choose these options what you want to test.
 #### Server-ServerAuthenticatorAttestationResponse-Resp-1 
 ##### Test server processing ServerAuthenticatorAttestationResponse structure
 
-* P-1 Get PublicKeyCredentialCreationOptions, generate a valid response(with for example packed attestation). Get another one of PublicKeyCredentialCreationOptions for the same username as in previous request, and check that it's have "excludeCredentials" field and: (a) it's of type Array (b) it's not empty (c) each member is of type PublicKeyCredentialDescriptor (d) it contains PublicKeyCredentialDescriptor, with "type" set to "public-key", and "id" set to base64url encoded credId from the previous registration
+* P-1 Get PublicKeyCredentialCreationOptions, generate a valid response (e.g. with packed attestation). Get another one of PublicKeyCredentialCreationOptions for the same username as in the previous request, and check that it has "excludeCredentials" field and: (a) it's of type Array (b) it's not empty (c) each member is of type PublicKeyCredentialDescriptor (d) it contains PublicKeyCredentialDescriptor, with "type" set to "public-key", and "id" set to base64url encoded credId from the previous registration
 * F-1 Send ServerAuthenticatorAttestationResponse that is missing "id" field and check that server returns an error
 * F-2 Send ServerAuthenticatorAttestationResponse with "id" field is NOT of type DOMString, and check that server returns an error
 * F-3 Send ServerAuthenticatorAttestationResponse with "id" is not base64url encode, and check that server returns an error
@@ -107,7 +107,7 @@ You can choose these options what you want to test.
 * F-14 Send ServerAuthenticatorAttestationResponse with clientDataJSON.origin is not set to the origin
 * F-15 Send ServerAuthenticatorAttestationResponse with clientDataJSON.tokenBinding is not of type Object
 * F-16 Send ServerAuthenticatorAttestationResponse with clientDataJSON.tokenBinding missing status field
-* F-17 Send ServerAuthenticatorAttestationResponse with clientDataJSON.tokenBinding.status is not set to either of present, supported or not-supported
+* F-17 Send ServerAuthenticatorAttestationResponse with clientDataJSON.tokenBinding.status is not set to present, supported or not-supported
 
 #### Server-ServerAuthenticatorAttestationResponse-Resp-3
 ##### Test server processing AttestationObject
@@ -153,20 +153,20 @@ You can choose these options what you want to test.
 ##### Test server processing "packed" FULL attestation
 
 * P-1 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation, and check that server succeeds
-* P-2 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation that contains chain that links to the root certificate in the metadata in it's response, and check that server succeeds
+* P-2 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation that contains chain that links to the root certificate in the metadata in its response, and check that server succeeds
 * F-1 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with fmt set to an unknown attestation format, and check that server returns an error
-* F-2 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, and with attStmt.sig contains a signature that can not be verified, and check that server returns an error
+* F-2 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, and with attStmt.sig contains a signature that cannot be verified, and check that server returns an error
 * F-3 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt missing "x5c" field, and check that server returns an error
 * F-4 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c is not of type ARRAY, and check that server returns an error
 * F-5 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c is an empty ARRAY, and check that server returns an error
 * F-6 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains a leaf certificate that is expired, and check that server returns an error
 * F-7 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains a leaf certificate that is not yet started, and check that server returns an error
-* F-8 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains a leaf certificate algorithm does not equal to the one that is specified in MetadataStatement, and check that server returns an error
-* F-9 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains certificate chain, that can not be verified, and check that server returns an error
+* F-8 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains a leaf certificate algorithm not equal to the one that is specified in MetadataStatement, and check that server returns an error
+* F-9 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains certificate chain, that cannot be verified, and check that server returns an error
 * F-10 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c containing full chain, and check that server returns an error
 * F-11 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c containing full chain, that is not correctly ordered, and check that server returns an error
 * F-12 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with attStmt.x5c contains expired intermediate certificate, and check that server returns an error
-* F-13 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with signature that can not be verified by the public key extracted from leaf certificate, and check that server returns an error
+* F-13 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with signature that cannot be verified by the public key extracted from leaf certificate, and check that server returns an error
 * F-14 Send ServerAuthenticatorAttestationResponse with FULL "packed" attestation, with signature that is generated using new credential private key, and not attestation batch private key, and check that server returns an error
 
 #### Server-ServerAuthenticatorAttestationResponse-Resp-6
@@ -182,7 +182,7 @@ You can choose these options what you want to test.
 
 * P-1 Send a valid ServerAuthenticatorAttestationResponse with SELF(SURROGATE) "packed" attestation, and check that server succeeds
 * P-2 Send a valid ServerAuthenticatorAttestationResponse with SELF(SURROGATE) "packed" attestation, and check that server succeeds
-* F-1 For server that expects attestation "none", send attestation FULL packed, with fmt set "none" and check that server returns an error
+* F-1 For server that expects attestation "none", send attestation FULL packed, with fmt set to "none" and check that server returns an error
 
 #### Server-ServerAuthenticatorAttestationResponse-Resp-8
 ##### Test server processing "fido-u2f" attestation
@@ -227,8 +227,8 @@ You can choose these options what you want to test.
 #### Server-ServerPublicKeyCredentialGetOptionsResponse-Req-1
 ##### Test server generating ServerPublicKeyCredentialGetOptionsResponse
 
-* P-1 Get ServerPublicKeyCredentialGetOptionsResponse, and check that: (a) response MUST contain "status" field, and it MUST be of type DOMString and set to "ok" (b) response MUST contain "errorMessage" field, and it MUST be of type DOMString and set to an empty string (c) response MUST contains "challenge" field, of type String, base64url encoded and not less than 16 bytes. (d) response MUST contains "extensions" field, of type Object, with "example.extension" set to a test string. (d) If response contains "timeout" field, check that it's of type Number and is bigger than 0 (e) If response contains "rpId" field, it: (1) MUST be of type SVSString (2) MUST be HTTPS URL (3) MUST be either RP origin, or suffix of the origin (4) MUST include port if applies (f) response contains "allowCredentials" field, of type Array and: (1) each member MUST be of type Object (2) each member MUST contain "type" field of type DOMString (3) check that "id" field is not missing, and is of type DOMString, and is not empty. It MUST be base64url encoded byte sequence. (4) check that it's contain exactly one member, with type set to "public-key" and id is set to previously registered credID. (g) response.userVerification MUST be set to the requested "userVerification"
-* P-2 Get two ServerPublicKeyCredentialGetOptionsResponse, and check that challenge in Request1 is different to challenge in Request2
+* P-1 Get ServerPublicKeyCredentialGetOptionsResponse, and check that: (a) response MUST contain "status" field, and it MUST be of type DOMString and set to "ok" (b) response MUST contain "errorMessage" field, and it MUST be of type DOMString and set to an empty string (c) response MUST contain "challenge" field, of type String, base64url encoded and not less than 16 bytes. (d) response MUST contain "extensions" field, of type Object, with "example.extension" set to a test string. (d) If response contains "timeout" field, check that it's of type Number and is bigger than 0 (e) If response contains "rpId" field, it: (1) MUST be of type SVSString (2) MUST be HTTPS URL (3) MUST be either RP origin, or suffix of the origin (4) MUST include port if applies (f) response contains "allowCredentials" field, of type Array and: (1) each member MUST be of type Object (2) each member MUST contain "type" field of type DOMString (3) check that "id" field is not missing, and is of type DOMString, and is not empty. It MUST be base64url encoded byte sequence. (4) check that it contains exactly one member, with type set to "public-key" and id set to previously registered credID. (g) response.userVerification MUST be set to the requested "userVerification"
+* P-2 Get two ServerPublicKeyCredentialGetOptionsResponse, and check that challenge in Request1 is different from challenge in Request2
 
 ### "GetAssertion Response" test items
 #### Server-ServerAuthenticatorAssertionResponse-Resp-1
@@ -237,7 +237,7 @@ You can choose these options what you want to test.
 * P-1 Send a valid ServerAuthenticatorAssertionResponse, and check that server succeeds
 * F-1 Send ServerAuthenticatorAssertionResponse that is missing "id" field and check that server returns an error
 * F-2 Send ServerAuthenticatorAssertionResponse with "id" field is NOT of type DOMString, and check that server returns an error
-* F-3 Send ServerAuthenticatorAssertionResponse with "id" is not base64url encode, and check that server returns an error
+* F-3 Send ServerAuthenticatorAssertionResponse with "id" is not base64url encoded, and check that server returns an error
 * F-4 Send ServerAuthenticatorAssertionResponse that is missing "type" field and check that server returns an error
 * F-5 Send ServerAuthenticatorAssertionResponse with "type" field is NOT of type DOMString and check that server returns an error
 * F-6 Send ServerAuthenticatorAssertionResponse with "type" is not set to "public-key", and check that server returns an error
@@ -276,12 +276,12 @@ You can choose these options what you want to test.
 * F-14 Send ServerAuthenticatorAssertionResponse with clientDataJSON.origin is not set to the origin
 * F-15 Send ServerAuthenticatorAssertionResponse with clientDataJSON.tokenBinding is not of type Object
 * F-16 Send ServerAuthenticatorAssertionResponse with clientDataJSON.tokenBinding missing status field
-* F-17 Send ServerAuthenticatorAssertionResponse with clientDataJSON.tokenBinding.status is not set to either of present, supported or not-supported
+* F-17 Send ServerAuthenticatorAssertionResponse with clientDataJSON.tokenBinding.status is not set to present, supported or not-supported
 
 #### Server-ServerAuthenticatorAssertionResponse-Resp-3
 ##### Test server processing authenticatorData
 
-* P-1 Send a valid ServerAuthenticatorAssertionResponse, for the authenticator that does not support counter(counter is always 0), and check that server succeeds
+* P-1 Send a valid ServerAuthenticatorAssertionResponse, for the authenticator that does not support counter (counter is always 0), and check that server succeeds
 * P-2 Send a valid ServerAuthenticatorAssertionResponse with authenticatorData.flags.UV is set, for userVerification set to "required", and check that server succeeds
 * P-3 Send a valid ServerAuthenticatorAssertionResponse both authenticatorData.flags.UV and authenticatorData.flags.UP is set, for userVerification set to "required", and check that server succeeds
 * P-4 Send a valid ServerAuthenticatorAssertionResponse both authenticatorData.flags.UV and authenticatorData.flags.UP are not set, for userVerification set to "preferred", and check that server succeeds
@@ -300,12 +300,12 @@ You can choose these options what you want to test.
 ##### Test server processing ServerAuthenticatorAttestationResponse structure
 
 * P-1 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for a valid MDS metadata, and check that server succeeds
-* F-1 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's hash can not be verified, and check that serve returns an error
-* F-2 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's status is set to USER_VERIFICATION_BYPASS, ATTESTATION_KEY_COMPROMISE, USER_KEY_REMOTE_COMPROMISE or USER_KEY_PHYSICAL_COMPROMISE, and check that serve returns an error
-* F-3 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's signature can not be verified, and check that serve returns an error
-* F-4 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's certificate chain can not be verified, and check that serve returns an error
-* F-5 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's metadata service intermediate certificate is revoked, and check that serve returns an error
-* F-6 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS who's metadata service leaf certificate is revoked, and check that serve returns an error
+* F-1 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose hash cannot be verified, and check that server returns an error
+* F-2 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose status is set to USER_VERIFICATION_BYPASS, ATTESTATION_KEY_COMPROMISE, USER_KEY_REMOTE_COMPROMISE or USER_KEY_PHYSICAL_COMPROMISE, and check that server returns an error
+* F-3 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose signature cannot be verified, and check that server returns an error
+* F-4 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose certificate chain cannot be verified, and check that server returns an error
+* F-5 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose metadata service intermediate certificate is revoked, and check that server returns an error
+* F-6 Send a valid ServerAuthenticatorAttestationResponse with FULL "packed" attestation for metadata from MDS whose metadata service leaf certificate is revoked, and check that server returns an error
 
 
 

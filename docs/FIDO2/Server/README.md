@@ -22,7 +22,7 @@ Choose from these options what you want to test.
 
 <img src="img/2.png" width="50%"/>
 
-* If you want to capture network while testing, launch the inspector tool from Menu -> Open Inspector menu.
+* If you want to capture network traffic while testing, launch the inspector tool from Menu -> Open Inspector menu.
 
 <img src="img/3.png" width="50%"/>
 

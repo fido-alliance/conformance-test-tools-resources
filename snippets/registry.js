@@ -182,6 +182,12 @@
         /**
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          *I.e. [R (32 bytes), S (32 bytes)]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -7, crv: 1)
+         *
          */
         0x0001 : 'secp256r1_ecdsa_sha256_raw',
 
@@ -189,6 +195,12 @@
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          * DER [ITU-X690-2008] encoded ECDSA signature [RFC5480] on the NIST secp256r1 curve.
          * I.e. a DER encoded SEQUENCE { r INTEGER, s INTEGER }
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -7, crv: 1)
+         *
          */
         0x0002 : 'secp256r1_ecdsa_sha256_der',
 
@@ -199,6 +211,12 @@
          * - Salt Length of 32 bytes, i.e. the length of a SHA256 hash value.
          * - Trailer Field value of 1, which represents the trailer field with hexadecimal value 0xBC.
          * I.e. [ S (256 bytes) ]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_RSA_2048_RAW
+         ** ALG_KEY_RSA_2048_DER
+         ** ALG_KEY_COSE(kty: 3, alg: -37)
+         *
          */
         0x0003 : 'rsassa_pss_sha256_raw',
 
@@ -209,6 +227,12 @@
          * - Salt Length of 32 bytes, i.e. the length of a SHA256 hash value.
          * - Trailer Field value of 1, which represents the trailer field with hexadecimal value 0xBC.
          * I.e. a DER encoded OCTET STRING (including its tag and length bytes).
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_RSA_2048_RAW
+         ** ALG_KEY_RSA_2048_DER
+         ** ALG_KEY_COSE(kty: 3, alg: -37)
+         *
          */
         0x0004 : 'rsassa_pss_sha256_der',
 
@@ -216,6 +240,12 @@
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          * An ECDSA signature on the secp256k1 curve which must have raw R and S buffers, encoded in big-endian order.
          * I.e.[R (32 bytes), S (32 bytes)]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -47, crv: 8)
+         *
          */
         0x0005 : 'secp256k1_ecdsa_sha256_raw',
 
@@ -224,6 +254,12 @@
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          * DER [ITU-X690-2008] encoded ECDSA signature [RFC5480] on the secp256k1 curve.
          * I.e. a DER encoded SEQUENCE { r INTEGER, s INTEGER }
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -47, crv: 8)
+         *
          */
         0x0006 : 'secp256k1_ecdsa_sha256_der',
 
@@ -346,6 +382,7 @@
          */
         0x0013: 'ed448_eddsa_sha512_raw'
     }
+
 
     /**
      * Public Key Representation Formats Short Form
@@ -608,6 +645,12 @@
         /**
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          *I.e. [R (32 bytes), S (32 bytes)]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -7, crv: 1)
+         *
          */
         0x0001 : 'ALG_SIGN_SECP256R1_ECDSA_SHA256_RAW',
 
@@ -615,6 +658,12 @@
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          * DER [ITU-X690-2008] encoded ECDSA signature [RFC5480] on the NIST secp256r1 curve.
          * I.e. a DER encoded SEQUENCE { r INTEGER, s INTEGER }
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -7, crv: 1)
+         *
          */
         0x0002 : 'ALG_SIGN_SECP256R1_ECDSA_SHA256_DER',
 
@@ -625,6 +674,12 @@
          * - Salt Length of 32 bytes, i.e. the length of a SHA256 hash value.
          * - Trailer Field value of 1, which represents the trailer field with hexadecimal value 0xBC.
          * I.e. [ S (256 bytes) ]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_RSA_2048_RAW
+         ** ALG_KEY_RSA_2048_DER
+         ** ALG_KEY_COSE(kty: 3, alg: -37)
+         *
          */
         0x0003 : 'ALG_SIGN_RSASSA_PSS_SHA256_RAW',
 
@@ -635,6 +690,12 @@
          * - Salt Length of 32 bytes, i.e. the length of a SHA256 hash value.
          * - Trailer Field value of 1, which represents the trailer field with hexadecimal value 0xBC.
          * I.e. a DER encoded OCTET STRING (including its tag and length bytes).
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_RSA_2048_RAW
+         ** ALG_KEY_RSA_2048_DER
+         ** ALG_KEY_COSE(kty: 3, alg: -37)
+         *
          */
         0x0004 : 'ALG_SIGN_RSASSA_PSS_SHA256_DER',
 
@@ -642,14 +703,26 @@
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
          * An ECDSA signature on the secp256k1 curve which must have raw R and S buffers, encoded in big-endian order.
          * I.e.[R (32 bytes), S (32 bytes)]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -47, crv: 8)
+         *
          */
         0x0005 : 'ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW',
 
 
         /**
          * An ECDSA signature on the NIST secp256r1 curve which must have raw R and S buffers, encoded in big-endian order.
-         * DER [ITU-X690-2008] encoded ECDSA signature [RFC5480] on the secp256k1 curve.
-         * I.e. a DER encoded SEQUENCE { r INTEGER, s INTEGER }
+         * An ECDSA signature on the secp256k1 curve which must have raw R and S buffers, encoded in big-endian order.
+         * I.e.[R (32 bytes), S (32 bytes)]
+         *
+         * This algorithm is suitable for authenticators using the following key representation formats:
+         ** ALG_KEY_ECC_X962_RAW
+         ** ALG_KEY_ECC_X962_DER
+         ** ALG_KEY_COSE(kty: 2, alg: -47, crv: 8)
+         *
          */
         0x0006 : 'ALG_SIGN_SECP256K1_ECDSA_SHA256_DER',
 
@@ -771,7 +844,7 @@
          */
         0x0013: 'ALG_SIGN_ED448_EDDSA_SHA512_RAW'
     }
-
+    
 
     /**
      * Public Key Representation Formats
@@ -977,13 +1050,15 @@
         'ECDH-ES+HKDF-256': -25
     }
 
-    /**
+      /**
      * COSE params to FIDO ALG mapper
      * @type {Object}
      */
     var COSE_PARAM_TO_FIDO_ALG = {
         'alg:-7,crv:1': 'ALG_SIGN_SECP256R1_ECDSA_SHA256_RAW',
         'alg:-7,crv:8': 'ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW',
+        'alg:-47,crv:8': 'ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW',
+        'alg:-47': 'ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW',
         'alg:-37': 'ALG_SIGN_RSASSA_PSS_SHA256_RAW',
         'alg:-38': 'ALG_SIGN_RSASSA_PSS_SHA384_RAW',
         'alg:-39': 'ALG_SIGN_RSASSA_PSS_SHA512_RAW',
@@ -1004,6 +1079,8 @@
     var COSE_PARAM_TO_FIDO_ALG_SHORT = {
         'alg:-7,crv:1': 'secp256r1_ecdsa_sha256_raw',
         'alg:-7,crv:8': 'secp256k1_ecdsa_sha256_raw',
+        'alg:-47,crv:8': 'secp256k1_ecdsa_sha256_raw',
+        'alg:-47': 'secp256k1_ecdsa_sha256_raw',
         'alg:-37': 'rsassa_pss_sha256_raw',
         'alg:-38': 'rsassa_pss_sha384_raw',
         'alg:-39': 'rsassa_pss_sha256_raw',

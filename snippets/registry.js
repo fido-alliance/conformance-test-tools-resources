@@ -1125,7 +1125,7 @@
         },
         'ALG_SIGN_SECP256K1_ECDSA_SHA256_RAW': {
             kty: 2,
-            alg: -7,
+            alg: -47,
             crv: 8,
             hashAlg: 'SHA-256',
             curve: 'secp256k1'
@@ -1226,7 +1226,7 @@
         },
         'secp256k1_ecdsa_sha256_raw': {
             kty: 2,
-            alg: -7,
+            alg: -47,
             crv: 8,
             hashAlg: 'SHA-256',
             curve: 'secp256k1'

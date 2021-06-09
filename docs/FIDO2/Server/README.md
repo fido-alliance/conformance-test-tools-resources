@@ -16,7 +16,8 @@ You can choose these options what you want to test.
 
 * Setup your FIDO2 server with HTTPS enable access.
 * Click "DOWNLOAD SERVER METADATA" to download metadata and register metadata to your server.
-* Register your server url at https://fidoalliance.co.nz/mds/ and add provided MDS endpoints to your server.
+* FOR MDS3: Register your server url at http://mds3.certinfra.fidoalliance.org/ and add provided MDS3 endpoints to your server.
+* FOR Legacy MDS2: Register your server url at http://mds.certinfra.fidoalliance.org/ and add provided legacy MDS2 endpoints to your server.
 * Then you can find 5 url for MDS. Setup those 5 urls to access from your server.
 * Launch FIDO Conformance Tools and set your server url into text box at TESTS CONFIGURATION.
 

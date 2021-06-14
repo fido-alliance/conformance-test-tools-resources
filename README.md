@@ -15,7 +15,7 @@ Here you can find a help with running the conformance test tools and submit the 
 
 
 # Privacy
-Note that this repository is open to the general public. If you are concerned about your privacy or the privacy of your company, please email [conformance-tools@fidoalliance.org](conformance-tools@fidoalliance.org)
+Note that this repository is open to the general public. If you are concerned about your privacy or the privacy of your company, please email [tools@certification.fidoalliance.org](mailto:tools@certification.fidoalliance.org)
 
 # Contact Us
 If you have any other questions or concerns, please contact [certification@fidoalliance.org](mailto:certification@fidoalliance.org).

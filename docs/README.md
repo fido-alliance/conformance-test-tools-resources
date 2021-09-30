@@ -1,6 +1,10 @@
 Welcome to the Certification Conformance Test Tools wiki!
 hello world
 
+FIDO Device Onboarding: 
+
+- [Pre-interop](./FDO/Pre-Interop)
+
 For FIDO2 conformance test:
 
  - [Server](./FIDO2/Server)

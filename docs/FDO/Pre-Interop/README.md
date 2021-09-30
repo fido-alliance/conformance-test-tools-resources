@@ -10,10 +10,11 @@ The device and DO token will be given to DO. The DO will use it's own, DO token 
 
 The idea is that to succeed all entities need to show successful interaction with each other, and report it back to the dashboard. 
 
+![FIDO FDO Matchmaking](https://github.com/fido-alliance/conformance-test-tools-resources/blob/4360a9d653f743b4f06c5bbdb52983956cdfd1cb/docs/FDO/Pre-Interop/FDO%20FIDO%20Alliance.png)
 
 ## Dashboard API
 
-The dashboard API can be found in [API reference](./Dashboard API.md)
+The dashboard API can be found in [API reference](./Dashboard-API.md)
 
 ## Minimum requirements
 

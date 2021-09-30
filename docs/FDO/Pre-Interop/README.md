@@ -1,17 +1,19 @@
 FIDO Alliance Pre-Interop Requirements
 ===
 
-The interop will implemented as a match making competition with all parties reporing results to the dashboard.
+The interop will be implemented as a match making competition with all parties reporting results to the referee dashboard.
 
-There are three groups involved: Devices, RV(Rendezvous)s and DO(Device Onboarding)s. For each of the member of the group, an access token is issued that is used to notify the dashboard that enrollment sucessfully finished.
+There are three groups involved: Devices, RV(Rendezvous)s and DO(Device Onboarding)s. For each of the member of the group, an access token is issued that is used to notify the dashboard that enrollment was successfully finished.
 
-The dashboard manager, aka "referee" will generate a test/match matrix with each device model must be able to interact with at least two RVs and two DOs that are implemented by an opposing company.
-
-The referee issues three categories of access tokens. For DOs
+The device and DO token will be given to DO. The DO will use it's own, DO token to report back to the dashboard it's own state. During the serviceInfo exchange the DO will pass device token as a ServiceInfo and device will use that to connect to the dashboard and report success of the enrollment.
 
 
-The idea is that to succeed all entetes need to show successful interaction with each other, and report it back to the dashboard. 
+The idea is that to succeed all entities need to show successful interaction with each other, and report it back to the dashboard. 
 
+
+## Dashboard API
+
+The dashboard API can be found in [API reference](./Dashboard API.md)
 
 ## Minimum requirements
 
@@ -73,3 +75,5 @@ AwEHoUQDQgAEjvc9ohIqZZSlNFLe3KOvzb7UzEVdFcNf64uKQrQxSZ52QLWgCxph
 WvWNjSRxRTllWTtftK0MwqhCeZYnWwST/w==
 -----END EC PRIVATE KEY-----
 ```
+
+

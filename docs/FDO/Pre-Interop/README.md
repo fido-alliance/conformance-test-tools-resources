@@ -16,6 +16,11 @@ The idea is that to succeed all entities need to show successful interaction wit
 
 The dashboard API can be found in [API reference](./Dashboard-API.md)
 
+## URLs
+
+- Rendezvous Server http://rv.fdo.tools
+- Dashboard https://dashboard.fdo.tools
+
 ## Minimum requirements
 
 - Support HMAC/HASH: SHA256
@@ -77,4 +82,13 @@ WvWNjSRxRTllWTtftK0MwqhCeZYnWwST/w==
 -----END EC PRIVATE KEY-----
 ```
 
+## Conformance Service Info
+
+For the FDO interop the service info extension is idenfied as 
+
+```
+fido_alliance:dev_conformance
+```
+
+With the value of type String that contains an access token.
 

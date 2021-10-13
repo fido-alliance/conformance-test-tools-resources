@@ -21,7 +21,8 @@ The event party sends an event with the GUID of the device in question, and the 
 ```yaml
 LoggerEvent = [
     Guid: bstr,
-    TOProtocol: uint
+    TOProtocol: uint,
+    Nonce: bstr // NonceTO0Sign or NonceTO1Proof or NonceTO2SetupDv 
 ]
 
 toprotocols = (

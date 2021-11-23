@@ -1,7 +1,7 @@
 How to get GetInfo snapshot for your MDS3 metadata
 ===
 
-1. Download the latest conformance test tools from [builds.fidoalliance.org](https://builds.fidoalliance.org/). Check that it's 1.6.32 or higher. (If main folder missing, check Experimental)
+1. Download the latest conformance test tools from [builds.fidoalliance.org](https://builds.fidoalliance.org/). Check that it's 1.6.32 or higher. (If version is missing in the main folder missing, check experimental)
 
 2. Open the test tools, and press the menu button in the top right corner.
 

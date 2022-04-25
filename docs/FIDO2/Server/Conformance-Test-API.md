@@ -335,7 +335,7 @@ Similar to the communication flow described for Registration, the Authentication
 #### Authentication Example: Credential Get Options
 
 **Request:**
-* **URL:** /attestation/options
+* **URL:** /assertion/options
 * **Method:** `POST`
 * **URL Params:** None
 * **Body:** `application/json` encoded `ServerPublicKeyCredentialGetOptionsRequest`
@@ -381,7 +381,7 @@ Similar to the communication flow described for Registration, the Authentication
 
 **Sample Call:**
 ```javascript
-    fetch('/attestation/options', {
+    fetch('/assertion/options', {
         method  : 'POST',
         credentials : 'same-origin',
         headers : {

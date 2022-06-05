@@ -9,8 +9,7 @@ For FIDO2 conformance test:
 
  - [Server](./FIDO2/Server)
    + [Conformance Test API](./FIDO2/Server/Conformance-Test-API.md)
- - [Security key](./FIDO2/Security-Key/) TODO
- - [Platform](./FIDO2/Platform) TODO
+ - [Security key](./FIDO2/Authenticator/)
 
 For UAF conformance test:
 
@@ -21,13 +20,8 @@ For UAF conformance test:
  - [ASM](./UAF/ASM/) TODO
  
  
-FIDO Certification Conformance Tools Facets:
+FIDO UAF Certification Conformance Tools Facets:
 
 - ios:bundle-id:org.fidoalliance.mobile.conformancetools
 - android:apk-key-hash:LK84ci82ruA6u8SyF26cghsVwZg=
 - android:apk-key-hash:hoG2zCMzhpGCNnLFceBuVpPfDqM
-
-For U2F conformance test:
-
- - [Server](./U2F/Server/) TODO
- - [Security key](./U2F/Security-Key) TODO

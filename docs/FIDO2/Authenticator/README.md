@@ -1,7 +1,7 @@
 # FIDO2 Testing
 
 
-### Enterprise attestation
+### Enterprise attestation (CTAP2.1+)
 
 
 To pass enterprise attestation test you setup EP to these parameters:

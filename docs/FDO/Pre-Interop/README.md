@@ -1,30 +1,6 @@
 FIDO Alliance Pre-Interop Requirements
 ===
 
-
-# IMPORTANT! ERRATA FOR EAT BEGINS
-
-After RAT 3 (August 2020) the values for EAT-NONCE and EAT-EUID have changed.
-
-**NONCE**
-
-- **NEW EAT-NONCE - 10**
-- OLD EAT-NONCE - 9
-
-
-**EUID**
-
-- **NEW EAT-EUID - 11**
-- OLD EAT-EUID - 10
-
-For current tags assignment information, please refer to https://datatracker.ietf.org/doc/html/draft-ietf-rats-eat-10#section-7.3.1
-
-The specified changes and more will be addressed in upcomming FDO errata.
-
-# IMPORTANT! ERRATA FOR EAT ENDS
-
-
-
 The interop will be implemented as a match making competition with all parties reporting results to the referee dashboard.
 
 There are three groups involved: Devices, RV(Rendezvous)s and DO(Device Onboarding)s. For each of the member of the group, an access token is issued that is used to notify the dashboard that enrollment was successfully finished.

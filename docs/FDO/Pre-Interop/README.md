@@ -26,7 +26,7 @@ The dashboard API can be found in [API reference](./Dashboard-API.md)
 - Support HMAC/HASH: SHA256/SHA384
 - Support KEX: ECDH
 - Supporting PublicKey: X509 and COSE public key encoding
-- Supporting Signature: ES256/ES384/EPID??
+- Supporting Signature: ES256/ES384
 - Supporting Encryption: AES128/CTR/HMAC-SHA256
 - Supporting FIDO Conformance API and ServiceInfo extension.
 

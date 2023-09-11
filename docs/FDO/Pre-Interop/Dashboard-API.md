@@ -3,9 +3,9 @@ Dashboard API
 
 Domain: http://dashboard.fdo.tools
 
-Path: /logger/100/msg/
+Path: /logger/101/msg/
 
-Protocol version: 100
+Protocol version: 101
 
 The transport requirements and all error definitions are described in the FDO specs.
 

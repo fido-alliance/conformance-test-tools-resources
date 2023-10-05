@@ -2,6 +2,7 @@ Dashboard API
 ===
 
 Domain: http://dashboard.fdo.tools
+HTTP Only domain: http://http.dashboard.fdo.tools
 
 Path: /logger/101/msg/
 

@@ -18,8 +18,10 @@ The dashboard API can be found in [API reference](./Dashboard-API.md)
 
 ## URLs
 
-- Rendezvous Server http://rv.fdo.tools
+- Rendezvous Server https://rv.fdo.tools
+  + HTTP ONLY http://http.rv.fdo.tools
 - Dashboard https://dashboard.fdo.tools
+  + HTTP ONLY http://http.dashboard.fdo.tools
 
 ## Minimum requirements
 

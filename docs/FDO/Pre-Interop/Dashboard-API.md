@@ -10,7 +10,10 @@ Protocol version: 101
 
 The transport requirements and all error definitions are described in the FDO specs.
 
-All commands require proper content-type, and authorization header containing previously issued by the dashboard access token.
+## Authorization and Header
+
+- Required header Content-Type set to "application/cbor"
+- Required header Authorization set to the issued by FIDO Alliance authorization token
 
 ## Commands
 

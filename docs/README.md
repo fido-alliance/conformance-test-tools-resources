@@ -3,7 +3,8 @@ hello world
 
 FIDO Device Onboarding: 
 
-- [Pre-interop](./FDO/Pre-Interop)
+- [FDO Resources](./FDO/README.md)
+  + [Pre-interop](./FDO/Pre-Interop)
 
 For FIDO2 conformance test:
 

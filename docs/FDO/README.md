@@ -12,7 +12,8 @@ A list of awesome FDO resources.
 - [RedHat: fido-device-onboard-rs](https://github.com/fdo-rs/fido-device-onboard-rs/tree/main) - An implementation of the FIDO Device Onboard (FDO) spec written in Rust.
 
 
-## Articles 
+## Articles
+- [FIDO Alliance: FDO Resources](https://fidoalliance.org/device-onboarding/)
 - [How to onboard edge devices at scale with FDO and Linux](https://www.redhat.com/sysadmin/edge-device-onboarding-fdo)
 - [LF-EDGE: FDO](https://lfedge.org/projects/fido-device-onboard/)
 - [IBM: FDO](https://www.ibm.com/docs/en/eam/4.5?topic=agent-fdo-installation-registration)

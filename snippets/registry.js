@@ -3,12 +3,12 @@
     THIS IS A FIDO ALLIANCE COMMON REGISTRY FILE.
 
     AUTHOR: YURIY ACKERMANN <YURIY@FIDOALLIANCE.ORG> <YURIY.ACKERMANN@GMAIL.COM>
-    UPDATED: MAY 26TH 2021
+    UPDATED: FEBRUARY 2ND 2024
 
 
     LICENSE
 
-    COPYRIGHT FIDO ALLIANCE 2016-2021
+    COPYRIGHT FIDO ALLIANCE 2016-2024
 
     Permission is hereby granted, free of charge, to any person obtaining a copy
     of this software and associated documentation files (the "Software"), to deal
@@ -1045,8 +1045,9 @@
         'ED256': -260, // TPM_ECC_BN_P256 curve w/ SHA-256
         'ED512': -261, // ECC_BN_ISOP512 curve w/ SHA-512
         'ES256': -7,   // ECDSA w/ SHA-256 
-        'ES384': -36,  // ECDSA w/ SHA-384 
-        'ES512': -37,  // ECDSA w/ SHA-512
+        'ES384': -35,  // ECDSA w/ SHA-384 
+        'ES512': -36,  // ECDSA w/ SHA-512
+        'ES256K': -47,   // ECDSA w/ secp256k1 curve w/ SHA-256
         'ECDH-ES+HKDF-256': -25
     }
 
@@ -1078,12 +1079,11 @@
      */
     var COSE_PARAM_TO_FIDO_ALG_SHORT = {
         'alg:-7,crv:1': 'secp256r1_ecdsa_sha256_raw',
-        'alg:-7,crv:8': 'secp256k1_ecdsa_sha256_raw',
         'alg:-47,crv:8': 'secp256k1_ecdsa_sha256_raw',
         'alg:-47': 'secp256k1_ecdsa_sha256_raw',
         'alg:-37': 'rsassa_pss_sha256_raw',
         'alg:-38': 'rsassa_pss_sha384_raw',
-        'alg:-39': 'rsassa_pss_sha256_raw',
+        'alg:-39': 'rsassa_pss_sha512_raw',
         'alg:-257': 'rsassa_pkcsv15_sha256_raw',
         'alg:-258': 'rsassa_pkcsv15_sha384_raw',
         'alg:-259': 'rsassa_pkcsv15_sha512_raw',
@@ -1110,8 +1110,8 @@
         '-260': 'SHA-256',  // TPM_ECC_BN_P256 curve w/ SHA-256
         '-261': 'SHA-512',  // ECC_BN_ISOP512 curve w/ SHA-512
         '-7': 'SHA-256',    // ECDSA w/ SHA-256 
-        '-36': 'SHA-384',   // ECDSA w/ SHA-384 
-        '-37': 'SHA-512',   // ECDSA w/ SHA-512
+        '-35': 'SHA-384',   // ECDSA w/ SHA-384 
+        '-36': 'SHA-512',   // ECDSA w/ SHA-512
         '-8': 'SHA-512'     // EDDSA w/ SHA-512
     }
 

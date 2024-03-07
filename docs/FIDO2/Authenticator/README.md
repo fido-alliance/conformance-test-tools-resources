@@ -33,7 +33,7 @@ n48TZucDj7hti7FEAiAWaKX5YprJ+SeIOJFpLx/fsONJDKo9TBD0nO7Y2CgBJg==
 -----END CERTIFICATE-----
 ```
 
-EP Certificate Privaye KEY
+EP Certificate Private KEY
 
 ```
 -----BEGIN EC PRIVATE KEY-----

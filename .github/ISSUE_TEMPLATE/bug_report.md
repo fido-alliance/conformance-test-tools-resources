@@ -1,3 +1,8 @@
+---
+name: Open an Issue
+about: Bugs, features or proposals
+---
+
 By submitting this issue you are acknowledging that any information regarding this issue will be publicly available.
 
 If you have privacy concerns, please email [conformance-tools@fidoalliance.org](mailto:conformance-tools@fidoalliance.org)

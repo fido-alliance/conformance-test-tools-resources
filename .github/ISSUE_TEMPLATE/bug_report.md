@@ -1,38 +1,44 @@
----
-name: Bug report
-about: Create a report to help us improve
-title: ''
-labels: ''
-assignees: ''
+By submitting this issue you are acknowledging that any information regarding this issue will be publicly available.
 
----
+If you have privacy concerns, please email [conformance-tools@fidoalliance.org](mailto:conformance-tools@fidoalliance.org)
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+## FIRST PRE CHECK
 
-**To Reproduce**
-Steps to reproduce the behavior:
-1. Go to '...'
-2. Click on '....'
-3. Scroll down to '....'
-4. See error
+- [ ] I SOLEMNLY SWEAR THAT I HAVE SEARCHED [DOCUMENTATION](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs) AND WAS NOT ABLE TO RESOLVE MY ISSUE
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
+## What protocol are you implementing?
 
-**Screenshots**
-If applicable, add screenshots to help explain your problem.
+- [ ] FIDO2 Server
+- [ ] CTAP2.0
+- [ ] CTAP2.1
+- [ ] UAF 1.1
+- [ ] U2F 1.1
+- [ ] U2F 1.2
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS]
- - Browser [e.g. chrome, safari]
- - Version [e.g. 22]
+NOTE: UAF 1.0 certification have been officially sunset. U2F 1.2 only supported version of U2F.
 
-**Smartphone (please complete the following information):**
- - Device: [e.g. iPhone6]
- - OS: [e.g. iOS8.1]
- - Browser [e.g. stock browser, safari]
- - Version [e.g. 22]
+## What is your implementation class?
 
-**Additional context**
-Add any other context about the problem here.
+- [ ] Security Key / FIDO2 / U2F authenticators
+- [ ] Server
+- [ ] UAF Client-ASM-Authenticator combo
+- [ ] UAF Client
+- [ ] UAF ASM-Authenticator
+
+If you are platform authenticator vendor, please email [conformance-tools@fidoalliance.org](mailto:conformance-tools@fidoalliance.org)
+
+## What is the version of the tool are you using?
+
+
+## What is the OS and the version are you running?
+
+For desktop tools
+- [ ] OSX
+- [ ] Windows
+- [ ] Linux
+
+For UAF mobile tools
+- [ ] iOS
+- [ ] Android
+
+## Issue description

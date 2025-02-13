@@ -475,23 +475,25 @@ Similar to the communication flow described for Registration, the Authentication
 #### ServerPublicKeyCredentialGetOptionsRequest
 ```java
     dictionary ServerPublicKeyCredentialGetOptionsRequest {
-        required DOMString              username;
-        UserVerificationRequirement     userVerification = "preferred";
+        required DOMString                         username;
+        UserVerificationRequirement                userVerification = "preferred";
+        AuthenticationExtensionsClientInputs       extensions;
     };
 ```
 
 * **required** `username`    - A human-readable name for the entity. For example, "alexm", "alex.p.mueller@example.com" or "+14255551234".
 * `userVerification` - can be set to "required", "preferred", "discouraged". More in [WebAuthn](https://w3c.github.io/webauthn/#enumdef-userverificationrequirement) specification. Default set to "preferred"
+* `extensions` - a dictionary set to [AuthenticationExtensionsClientInputs](https://w3c.github.io/webauthn/#iface-authentication-extensions-client-inputs) described in WebAuthn specs.
 
 #### ServerPublicKeyCredentialGetOptionsResponse
 ```java
     dictionary ServerPublicKeyCredentialGetOptionsResponse : ServerResponse {
-        required DOMString                   challenge;
-        unsigned long                        timeout;
-        USVString                            rpId;
-        sequence<ServerPublicKeyCredentialDescriptor> allowCredentials = [];
-        UserVerificationRequirement          userVerification = "preferred";
-        AuthenticationExtensionsClientInputs extensions;
+        required DOMString                             challenge;
+        unsigned long                                  timeout;
+        USVString                                      rpId;
+        sequence<ServerPublicKeyCredentialDescriptor>  allowCredentials = [];
+        UserVerificationRequirement                    userVerification = "preferred";
+        AuthenticationExtensionsClientInputs           extensions;
     };
 ```
 
@@ -500,7 +502,7 @@ Similar to the communication flow described for Registration, the Authentication
 * `rpId`                      - This optional member specifies the relying party identifier claimed by the caller. If omitted, its value will be the CredentialsContainer object’s relevant settings object's origin's effective domain.
 * `allowCredentials`          - a sequence of **ServerPublicKeyCredentialDescriptor** described in this document
 * `userVerification`          - can be set to "required", "preferred", "discouraged". More in [WebAuthn](https://w3c.github.io/webauthn/#enumdef-userverificationrequirement) specification. Default set to "preferred". Corresponds to **ServerPublicKeyCredentialGetOptionsRequest.userVerification**
-* `extensions`                - a dictionary set to [AuthenticationExtensionsClientInputs](https://w3c.github.io/webauthn/#iface-authentication-extensions-client-inputs) described in WebAuthn specs
+* `extensions`                - a dictionary set to [AuthenticationExtensionsClientInputs](https://w3c.github.io/webauthn/#iface-authentication-extensions-client-inputs) described in WebAuthn specs. Corresponds to **ServerPublicKeyCredentialGetOptionsRequest.extensions**
 * Extends **ServerResponse** described in this document
 
 #### ServerAuthenticatorAssertionResponse

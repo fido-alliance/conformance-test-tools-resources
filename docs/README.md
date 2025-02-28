@@ -11,6 +11,7 @@ For FIDO2 conformance test:
  - [Server](./FIDO2/Server)
    + [Conformance Test API](./FIDO2/Server/Conformance-Test-API.md)
  - [Security key](./FIDO2/Authenticator/)
+ - [Test automation](./FIDO2/Automation.md)
 
 For UAF conformance test:
 

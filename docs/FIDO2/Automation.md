@@ -1,6 +1,6 @@
 # Test Automation
 
-Starting with v1.7.24 desktop FIDO Conformance Tools provide an option to enable test automation. To fully utilize this feature, you will likely require additional custom-made peripheral hardware.
+Starting with v1.7.25 desktop FIDO Conformance Tools provide an option to enable test automation. To fully utilize this feature, you will likely require additional custom-made peripheral hardware. Most of these options only work with the CTAP 2.1 test module.
 
 ## What does it do?
 When enabled, test automation minimizes user interaction and reduces manual input when running the tests. Instead of relying on popup dialogs and manual user interaction, conformance tools broadcast requests over http via POST for authenticator powercycle, user precence test etc. The idea is that these actions will be handled by an additional peripheral device instead of human action.

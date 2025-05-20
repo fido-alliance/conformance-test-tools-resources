@@ -511,14 +511,14 @@ dictionary ServerAuthenticatorAssertionResponse : ServerAuthenticatorResponse {
     required DOMString      clientDataJSON;
     required DOMString      authenticatorData;
     required DOMString      signature;
-    required DOMString      userHandle;
+    DOMString               userHandle;
 };
 ```
 
 * required `clientDataJSON`     - base64url encoded clientDataJSON buffer
 * required `authenticatorData`  - base64url encoded authenticatorData buffer
 * required `signature`          - base64url encoded signature buffer
-* required `userHandle`         - base64url encoded userHandle buffer. Corresponding to registered user **ServerPublicKeyCredentialUserEntity.id**
+* `userHandle`                  - base64url encoded userHandle buffer. Corresponding to registered user **ServerPublicKeyCredentialUserEntity.id**
 
 ## Common
 

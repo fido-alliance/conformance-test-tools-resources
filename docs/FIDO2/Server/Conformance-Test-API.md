@@ -37,6 +37,10 @@ This document contains a non-normative, proposed REST API for FIDO2 servers. Whi
 
 As with the FIDO2 specifications, the interfaces described here are highly dependent on the [[!WebAuthn]] specification. The nomenclature of this document follows that of WebAuthn and reuses the Interface Definition Language (IDL) for defining the messages that are sent to / from the server.
 
+> **Note:** This API may contain intentional discrepancies in some parameters when compared to the WebAuthn specification. Please keep in mind that this API is implemented **exclusively** for the testing purposes.
+>
+> Once the testing has been concluded, it may be safely removed from the production build.
+
 This document is broken up into three sections: registration, authentication, and common. The registration and authentication sections contain the messages relevant to those operations, and the common section includes messages and data formats that are common to both registration and authentication.
 
 ## Registration

@@ -1,5 +1,4 @@
-Pre-Interop Process Step-By-Step
-===
+# Pre-Interop Process Step-By-Step
 
 ## Terms
 
@@ -10,24 +9,62 @@ Pre-Interop Process Step-By-Step
 - TO1 - A second protocol in FDO that is used by the Device to get Device Owner network information,
 - TO2 - A third protocol in FDO, that is used by the device to contact Device Onboarding service, and perform onboarding.
 
+## Entities involved
+
+- **Vendors:**
+  - Device Owner (DO)
+  - Rendezvous Server (RV)
+  - Device
+- **Tooling:**
+  - FDO Interop Dashboard
+
+## Goal
+
+Verify that each **triplet** (Device, DO, RV) is **fully compliant** and that all three FDO protocols (TO0, TO1, TO2) have been correctly executed:
+
 ## Measure of success
 
-A successful interop defined by
-- A successful execution of TO0 between DO and RV, and a corresponding two records collected by the Dashboard.
-- A successful execution of TO1 between Device and RV, and a collected record from the RV.
-- A successful execution of TO2 between Device and DO, and a corresponding two records collected by the Dashboard.
-- Each device model must be able to successfully perform TO1 with two distinct Rendezvous Services, that are not developed and/or run the same company.
-- Each device model must be able to successfully perform TO1 with two distinct Device Onboarding services, that are not developer and/or run by the same company.
-- Each Device Onboarding service must be able to register it's RVInfo with at least two distinct Rendezvous Services that are not developed and/or run by the same company.
+| Step    | Success Criteria                                                                                     |
+| ------- | ---------------------------------------------------------------------------------------------------- |
+| **TO0** | DO and RV have submitted matching logs (same GUID and nonce)                                         |
+| **TO1** | RV has submitted a log showing it provided redirect instructions to the Device                       |
+| **TO2** | Device and DO have submitted matching logs (common nonce); DO issued SIM with access token to logger |
 
+### Expected Logs
+
+| Protocol | Expected Logger Events        |
+| -------- | ----------------------------- |
+| **TO0**  | 2 events — from DO and RV     |
+| **TO1**  | 1 event — from RV             |
+| **TO2**  | 2 events — from Device and DO |
+
+### FIDO Requirements
+
+FIDO Alliance Require:
+
+- Each **Device**:
+  - Must interact with **2+ distinct RV vendors** for TO1
+  - Must complete TO2 with **2+ distinct DO vendors**
+- Each **DO**:
+  - Must register TO0 with **2+ distinct RV vendors**
+
+Since there is no easy way to modify the device, this means that each device vendor must provide two distinct devices for the interop.
+
+## Voucher, SIM and Logger support
+
+- Vouchers must be encoded in PEM format and contain last OVEntry's private key (as defined in https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs/FDO/Pre-Interop#voucher-encoding-format).
+- Vendors must support Dashboard API
+  https://github.com/fido-alliance/conformance-test-tools-resources/blob/main/docs/FDO/Pre-Interop/Dashboard-API.md
+- Device Onboarding Services, and Devices must support FIDO Alliance Conformance Service Info Module
+  https://github.com/fido-alliance/conformance-test-tools-resources/tree/main/docs/FDO/Pre-Interop#conformance-service-info
 
 ## Setup
+
 - Participating RV and DO vendors register with FIDO Alliance FDO Interop Dashboard and obtain access tokens to submit event logs to the dashboard.
 - FIDO Alliance assigns at random two RVs per device vendor.
-- Participating Device vendors, generate voucher [PEM files](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs/FDO/Pre-Interop#voucher-encoding-format), that contain PEM encoded voucher, and last OVEntry private key. THE VOUCHERS MUST HAVE AT LEAST ONE OV ENTRY
+- Participating Device vendors generate vouchers [PEM files](https://github.com/fido-alliance/conformance-test-tools-resources/tree/master/docs/FDO/Pre-Interop#voucher-encoding-format), that contain PEM encoded voucher, and last OVEntry private key. THE VOUCHERS MUST HAVE AT LEAST ONE OV ENTRY
 - Device vendors submit voucher files to the FIDO Alliance. FIDO Alliance then chooses at random, which DO gets which voucher, and then provides DO managers PEM files together with unique device specific access token, that DO will need to provide to the device during the ServiceInfo exchange with the ServiceInfo("fido_alliance:dev_conformance").
 - Device Onboarding services MUST be able to submit voucher to ALL participating rendezvous services.
-
 
 ## Operational
 

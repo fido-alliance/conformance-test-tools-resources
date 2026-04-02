@@ -5,7 +5,7 @@ about: Bugs, features or proposals
 
 By submitting this issue you are acknowledging that any information regarding this issue will be publicly available.
 
-If you have privacy concerns, please email [conformance-tools@fidoalliance.org](mailto:conformance-tools@fidoalliance.org)
+If you have privacy concerns, please email [tools@fidoalliance.org](mailto:tools@fidoalliance.org)
 
 ## FIRST PRE CHECK
 
@@ -16,6 +16,7 @@ If you have privacy concerns, please email [conformance-tools@fidoalliance.org](
 - [ ] FIDO2 Server
 - [ ] CTAP2.0
 - [ ] CTAP2.1
+- [ ] CTAP2.3
 - [ ] UAF 1.1
 - [ ] U2F 1.1
 - [ ] U2F 1.2
